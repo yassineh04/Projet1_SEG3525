@@ -19,12 +19,11 @@ header {
     justify-content: center;
 }
 
-.btn-primary{
-    size:40;
-    color:blue;
-    ;
-}
-
 .link-service{
     text-align:right;
 }
+
+.text-center{
+    font-size:30px;
+}
+
