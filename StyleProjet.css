@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align:right;
+}
+.middle-buttons {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-primary{
+    size:40;
+    color:blue;
+    ;
+}
+
+.link-service{
+    text-align:right;
+}
