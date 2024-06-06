@@ -27,3 +27,27 @@ header {
     font-size:30px;
 }
 
+.link-info{
+    text-align:right;
+}
+
+.fs-3{
+    text-align:right;
+}
+
+  .navbar {
+    background-color: #003366; /* Bleu marine */
+    text-align:center;
+  }
+
+  .btn-primary {
+    background-color: #D3D3D3; /* Gris clair */
+    border-color: #D3D3D3; /* Gris clair */
+    color: #003366; /* Bleu marine */
+  }
+  .btn-primary:hover {
+    background-color: #003366; /* Bleu marine */
+    border-color: #003366; /* Bleu marine */
+    color: #D3D3D3; /* Gris clair */
+  
+  }
