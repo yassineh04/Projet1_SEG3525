@@ -51,3 +51,15 @@ header {
     color: #D3D3D3; /* Gris clair */
   
   }
+
+  .custom-navbar {
+    max-width: 800px; /* Ajustez cette valeur selon vos besoins */
+    margin: 0 auto; /* Centre la navbar horizontalement */
+  }
+
+  .radio-group {
+    margin-bottom: 1rem;
+  }
+  .radio-group input {
+    margin-right: 0.5rem;
+  }
