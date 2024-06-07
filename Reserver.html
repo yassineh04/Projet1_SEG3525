@@ -5,10 +5,11 @@
     <link rel="stylesheet" href="StyleProjet.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <meta charset="UTF-8" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Carossiers</title>
+    <title>Reserver</title>
 </head>
 <body></body>
 <nav class="navbar navbar-expand-lg">
@@ -41,27 +42,60 @@
     <br>
     <br>
     <br>
-  <div style="margin:10px 100px 30px">
-    <div >
-        <input type="radio" id="html" name="fav_language" value="Ottawa">
+  <div style="font-weight:bold;background-color:#f2f2f2;margin-right:40px;margin-left:40px">
+
+    <div style="font-size:20px;margin-left:40px">
+        <input type="radio" id="ottawa" name="fav_language" value="Ottawa">
         <label for="Ottawa">Ottawa</label>
-        <input type="radio" id="css" name="fav_language" value="MONTREAL"> 
+        <input type="radio" id="montreal" name="fav_language" value="MONTREAL"> 
         <label for="montreal">Montreal</label>
-        <input type="radio" id="javascript" name="fav_language" value="toronto">
+        <input type="radio" id="toronto" name="fav_language" value="toronto">
         <label for="toronto">Toronto</label>
+        <div style="float:right;margin-right:50px">
+          <input type="checkbox" id="membre" name="membre" value="membre" style="gap:100px">
+          <label for="membre">Membre?</label>
+        </div>
     </div>
     <br>
     <br>
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Dropdown button
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
+    <div class="container mt-4">
+      <div class="select-wrapper">
+        <div class="select-container">
+          <label for="services" style="margin-right:30px;font-size:20px;margin-top:8px;font-weight:bold">Service:</label>
+          <select class="select-box">
+            <option value="">Choisissez le service</option>
+            <option value="first">Reparation des vehicules accidentes</option>
+            <option value="second">Reparation de pare-brises et de vitres</option>
+            <option value="third">Peinture de vehicule</option>
+            <option value="fourth">Debosselage sans peinture</option>
+            <option value="fifth">Reparation des egratignures</option>
+            <option value="sixth">Installation des pneus avec alignement</option>
+            <option value="seventh">Systeme de climatisation</option>
+          </select>
+          <div class="icon-container">
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+        </div>
+        <div class="select-container">
+          <label for="services" style="margin-right:10px;font-size:20px;margin-top:8px;font-weight:bold">Carossier:</label>
+          <select class="select-box">
+            <option value="">Choisissez le carossier</option>
+            <option value="first">Jean Dupont</option>
+            <option value="second">John Smith</option>
+            <option value="third">Melanie Grasso</option>
+            <option value="fourth">Alexa Guler</option>
+            <option value="fifth">Dustin Flick</option>
+            <option value="sixth">Georges Davies</option>
+          </select>
+          <div class="icon-container">
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+        </div>
+      </div>
     </div>
+    <br>
+    <br>
+    <br>
   </div>
 </body>
 </html>
