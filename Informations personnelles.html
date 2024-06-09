@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Informations personnelles</title>
 </head>
-<body></body>
+<body style="font-family: Georgia, serif">
 <nav class="navbar navbar-expand-lg">
     <div class="container d-flex justify-content-between align-items-center">
       <a class="navbar-brand mx-auto" href="#" style="color:#D3D3D3;font-size:2rem">
@@ -43,46 +43,42 @@
 
   <br>
   <br>
-<body>
-    <h3 style="text-align:center">Entrez vos informations personnelles</h3>
+    <h3 style="text-align:center;font-weight:bold">Entrez vos informations personnelles</h3>
     <br>
     <br>
     <br>
-    <div class="container">
-        <div class="container-flex">
-            <div class="prenom">
-                <label for="prenom">Prenom : </label>
-                <input id="prenom" type="text" name="prenom" placeholder="John">
-            </div>
-            <div class="carte">
-                <label for="carte">Numero de la carte : </label>
-                <input type="text" name="carte" placeholder="0000 0000 0000 0000" id="carte">
-            </div>
+    <div class="row g-3">
+        <div class="col">
+          <input id="prenom" type="text" class="form-control" placeholder="Prenom" aria-label="Prenom">
         </div>
-        <br>
-        <br>
-        <div class="container-flex">
-            <div class="nom">
-                <label for="nom">Nom : </label>
-                <input type="text" name="nom" placeholder="Will" id="nom">
-            </div>
-            <div class="CVV">
-                <label for="CVV">CVV :  </label>
-                <input type="text" name="CVV" placeholder="000" id="CVV">
-            </div>
+        <div class="col">
+          <input id="carte" type="text" class="form-control" placeholder="Numero de la carte" aria-label="Numero de la carte">
         </div>
-        <br>
-        <br>
-        <div class="container-flex">
-            <div class="email">
-                <label for="email">Adresse courriel : </label>
-                <input type="text" name="email" placeholder="john@example.com" id="email">
-            </div>
-            <div>
-                <label for="dateE">Date d'expiration :  </label>
-                <input type="date" name="dateE">
-            </div>
+      </div>
+<br>
+<br>
+<br>
+<br>
+      <div class="row g-3">
+        <div class="col">
+          <input id="nom" type="text" class="form-control" placeholder="Nom" aria-label="Nom">
         </div>
+        <div class="col">
+          <input id="CVV" type="text" class="form-control" placeholder="CVV" aria-label="CVV">
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="row g-3">
+        <div class="col">
+          <input id="email" type="text" class="form-control" placeholder="Adresse courriel" aria-label="Adresse courriel">
+        </div>
+        <div class="col">
+          <input id="date" type="date" class="form-control">
+        </div>
+      </div>
         <br>
         <br>
         <br>
@@ -97,25 +93,25 @@
             </div>
             <div class="popup" id="popup">
                 <img src="Image20.png">
-                <h2>Merci</h2>
-                <p>Votre reservation a ete confirme avec succes!</p>
+                <h2 style="text-align:center;font-weight:bold">Merci</h2>
+                <p style="text-align:center">Votre reservation a ete confirme avec succes!</p>
                 <div class="container-flex">
                     <div class="button">
                         <a href="Accueil.html">
-                            <button class="accueil" type="button">Accueil</button>
+                            <button class="accueil" type="button" style=" background-color:#6fd649;border:none;">Accueil</button>
                         </a>
                     </div>
                     <div class="button">
                         <a href="Mon profil.html">
-                            <button class="profil" type="button">Mon profil</button>
+                            <button class="profil" type="button" style=" background-color:#6fd649;border:none;">Mon profil</button>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="popup" id="popupr">
                 <img src="Image21.png">
-                <h2>Erreur</h2>
-                <p>Les champs ne peuvent pas etre vides.</p>
+                <h2 style="text-align:center;font-weight:bold">Erreur</h2>
+                <p style="text-align:center">Les champs ne peuvent pas etre vides.</p>
                 <div>
                     <button class="rouge" type="button" onclick="closePopup()">OK</button>
                 </div>
@@ -175,3 +171,4 @@
         </div>
       </div>
 </body>
+</html>

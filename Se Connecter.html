@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Se Connecter</title>
 </head>
-<body></body>
+<body style="font-family: Georgia, serif">
 <nav class="navbar navbar-expand-lg">
     <div class="container d-flex justify-content-between align-items-center">
       <a class="navbar-brand mx-auto" href="#" style="color:#D3D3D3;font-size:2rem">
@@ -41,36 +41,85 @@
   <br>
   <br>
   <br>
-  <br>
-  <br>
-<body>
+
     <div style="background-color:#f2f2f2;margin-right:500px;margin-left:500px">
         <br>
         <br>
         <br>
-        <h3 style="text-align:center">Se Connecter</h3>
+        <h3 style="text-align:center;font-weight:bold">Se Connecter</h3>
         <br>
         <br>
         <br>
-        <div style="text-align:center">
-            <label for="email">Adresse courriel : </label>
-            <input type="text" name="email" placeholder="Saisissez l'adresse courriel">
+        <form>
+            <div class="row mb-3" style="width:340px;margin:auto;margin-right:20px">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Email: </label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3">
+              </div>
+            </div>
             <br>
             <br>
-            <label for="mdp">Mot de passe : </label>
-            <input type="text" name="mdp" placeholder="Saisissez le mot de passe">
-        </div>
+            <div class="row mb-3" style="margin:auto;width:400px">
+              <label for="inputPassword3" class="col-sm-4 col-form-label">Mot de passe: </label>
+              <div class="col-sm-8">
+                <input type="password" class="form-control" id="inputPassword3">
+              </div>
+            </div>
+        </form>
         <br>
         <br>
         <br>
         <div class="d-flex justify-content-center">
-            <a href="#">
-                <button type="button" class="btn btn-primary btn-lg" style="background-color:#003366;color:#D3D3D3">Je me connecte</button>
-            </a>
+                <button onclick="error()" type="button" class="btn btn-primary btn-lg" style="background-color:#003366;color:#D3D3D3">Je me connecte</button>
+        </div>
+        <div class="popup" id="popup">
+            <img src="Image20.png">
+            <h2 style="text-align:center;font-weight:bold">Succes</h2>
+            <p style="text-align:center">Vous etes maintenant connecte a votre compte!</p>
+            <div class="container-flex">
+                <div class="button">
+                    <a href="Accueil.html">
+                        <button class="accueil" type="button" style=" background-color:#6fd649;border:none;">Accueil</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="popupr">
+            <img src="Image21.png">
+            <h2 style="text-align:center;font-weight:bold">Erreur</h2>
+            <p style="text-align:center">Les champs ne peuvent pas etre vides.</p>
+            <div>
+                <button class="rouge" type="button" onclick="closePopup()">OK</button>
+            </div>
         </div>
         <br>
         <br>
+        <br>
     </div>
+
+    <script>
+        let email=document.getElementById("inputEmail3");
+        let mdp=document.getElementById("inputPassword3");
+        let popup=document.getElementById("popup");
+        let popupr=document.getElementById("popupr");
+
+        function error(){
+            if(email.value==="" || mdp.value===""){
+                popupr.classList.add("open-popupr");
+            }
+            else{
+                popup.classList.add("open-popup");
+
+            }
+        }
+
+        function closePopup(){
+            popupr.classList.remove("open-popupr");
+        }
+    </script>
+    <br>
+    <br>
+    <br>
     <div style="background-color:#003366;color:#D3D3D3">
         <div class="container-flex">
           <div style="margin-left:200px">
@@ -102,3 +151,4 @@
         </div>
       </div>
 </body>
+</html>

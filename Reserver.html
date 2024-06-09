@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Reserver</title>
 </head>
-<body></body>
+<body style="font-family: Georgia, serif">
 <nav class="navbar navbar-expand-lg">
     <div class="container d-flex justify-content-between align-items-center">
       <a class="navbar-brand mx-auto" href="#" style="color:#D3D3D3;font-size:2rem">
@@ -41,32 +41,60 @@
   <br>
   <br>
 
-<body>
-    <h3 style="text-align:center">Reserver maintenant</h3>
+    <h3 style="text-align:center;font-weight:bold">Reserver maintenant</h3>
     <br>
     <br>
     <br>
-  <div style="font-weight:bold;background-color:#f2f2f2;margin-right:40px;margin-left:40px">
+  <div style="font-weight:bold;background-color:#D3D3D3;margin-right:40px;margin-left:40px">
 
-    <div style="font-size:20px;margin-left:40px">
-        <input type="radio" id="ottawa" name="fav_language" value="Ottawa">
-        <label for="Ottawa">Ottawa</label>
-        <input type="radio" id="montreal" name="fav_language" value="MONTREAL"> 
-        <label for="montreal">Montreal</label>
-        <input type="radio" id="toronto" name="fav_language" value="toronto">
-        <label for="toronto">Toronto</label>
-        <div style="float:right;margin-right:50px">
-          <input type="checkbox" id="membre" name="membre" value="membre" style="gap:100px">
-          <label for="membre">Membre?</label>
+    <fieldset class="row mb-3">
+      <legend class="col-form-label col-sm-2 pt-0">Localisation:</legend>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+          <label class="form-check-label" for="gridRadios1">
+            Ottawa
+          </label>
         </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+          <label class="form-check-label" for="gridRadios2">
+            Toronto
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+          <label class="form-check-label" for="gridRadios2">
+            Montreal
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+          <label class="form-check-label" for="gridRadios2">
+            A domicile
+          </label>
+        </div>
+      </div>
+    </fieldset>
+    <br>
+    <div class="row mb-3">
+      <div class="col-sm-10 offset-sm-2">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck1">
+          <label class="form-check-label" for="gridCheck1">
+            Membre?
+          </label>
+        </div>
+      </div>
     </div>
     <br>
     <br>
+    
     <div class="container mt-4">
       <div class="select-wrapper">
         <div class="select-container">
           <label for="services" style="margin-right:30px;font-size:20px;margin-top:8px;font-weight:bold">Service:</label>
-          <select class="select-box">
+          <select class="select-box" id="service">
             <option value="">Choisissez le service</option>
             <option value="first">Reparation des vehicules accidentes</option>
             <option value="second">Reparation de pare-brises et de vitres</option>
@@ -82,7 +110,7 @@
         </div>
         <div class="select-container">
           <label for="services" style="margin-right:10px;font-size:20px;margin-top:8px;font-weight:bold">Carossier:</label>
-          <select class="select-box">
+          <select class="select-box" id="carossier">
             <option value="">Choisissez le carossier</option>
             <option value="first">Jean Dupont</option>
             <option value="second">John Smith</option>
@@ -120,9 +148,15 @@
   <br>
   <br>
   <div style="text-align:center">
-    <a href="Informations personnelles.html">
-      <button type="button" class="btn btn-primary btn-lg" style="background-color:#003366;color:#D3D3D3">Reserver</button>
-    </a>
+      <button onclick="erreur()" type="button" class="btn btn-primary btn-lg" style="background-color:#003366;color:#D3D3D3">Reserver</button>
+    <div class="popup" id="popupr">
+      <img src="Image21.png">
+      <h2 style="text-align:center;font-weight:bold">Erreur</h2>
+      <p style="text-align:center">Les champs ne doivent pas etre vides</p>
+      <div>
+          <button class="rouge" type="button" onclick="closePopup()">OK</button>
+      </div>
+  </div>
   </div>
   <br>
   <br>
@@ -158,5 +192,26 @@
   
     </div>
   </div>
+  
+
+  <script>
+    let service=document.getElementById("service");
+    let carossier=document.getElementById("carossier");
+    let popup=document.getElementById("popup");
+    let popupr=document.getElementById("popupr");
+
+    function erreur(){
+      if (service.value==="" || carossier.value===""){
+        popupr.classList.add("open-popupr");
+      }
+      else{
+        window.location.href="Informations personnelles.html"
+      }
+    }
+
+    function closePopup(){
+      popupr.classList.remove("open-popupr");
+  }
+  </script>
 </body>
 </html>
